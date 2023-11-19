@@ -9,6 +9,7 @@ export const RegisterForm = () => {
     const email = event.target.elements.email.value;
     const password = event.target.elements.password.value;
     dispatch(register({ name, email, password }));
+    event.target.reset();
   };
   return (
     <form onSubmit={handleSubmit}>

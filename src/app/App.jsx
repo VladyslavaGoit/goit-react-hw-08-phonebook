@@ -1,5 +1,4 @@
 import { Layout } from 'components/Layout/Layout';
-
 import { RestrictedRoute } from 'components/RestrictedRoute';
 import { lazy } from 'react';
 // import { useEffect } from 'react';
@@ -15,6 +14,7 @@ import { Route, Routes } from 'react-router-dom';
 const HomePage = lazy(() => import('../pages/Home'));
 const ContactsPage = lazy(() => import('../pages/Phonebook'));
 const RegisterPage = lazy(() => import('../pages/Register'));
+const LoginPage = lazy(() => import('../pages/Login'));
 
 export const App = () => {
   return (
@@ -30,7 +30,12 @@ export const App = () => {
             />
           }
         />
-        <Route path="login" element={<div>Авторизація</div>} />
+        <Route
+          path="login"
+          element={
+            <RestrictedRoute redirectTo="/contacts" component={<LoginPage />} />
+          }
+        />
         <Route path="contacts" element={<ContactsPage />} />
       </Route>
     </Routes>
