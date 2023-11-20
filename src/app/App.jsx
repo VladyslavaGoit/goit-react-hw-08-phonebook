@@ -1,5 +1,6 @@
 import { Layout } from 'components/Layout/Layout';
 import { RestrictedRoute } from 'components/RestrictedRoute';
+import { GlobalStyle } from 'GlobalStyle';
 import { lazy } from 'react';
 // import { useEffect } from 'react';
 // import { useDispatch, useSelector } from 'react-redux';
@@ -18,27 +19,33 @@ const LoginPage = lazy(() => import('../pages/Login'));
 
 export const App = () => {
   return (
-    <Routes>
-      <Route path="/" element={<Layout />}>
-        <Route index element={<HomePage />} />
-        <Route
-          path="register"
-          element={
-            <RestrictedRoute
-              redirectTo="/contacts"
-              component={<RegisterPage />}
-            />
-          }
-        />
-        <Route
-          path="login"
-          element={
-            <RestrictedRoute redirectTo="/contacts" component={<LoginPage />} />
-          }
-        />
-        <Route path="contacts" element={<ContactsPage />} />
-      </Route>
-    </Routes>
+    <>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<HomePage />} />
+          <Route
+            path="register"
+            element={
+              <RestrictedRoute
+                redirectTo="/contacts"
+                component={<RegisterPage />}
+              />
+            }
+          />
+          <Route
+            path="login"
+            element={
+              <RestrictedRoute
+                redirectTo="/contacts"
+                component={<LoginPage />}
+              />
+            }
+          />
+          <Route path="contacts" element={<ContactsPage />} />
+        </Route>
+      </Routes>
+      <GlobalStyle />
+    </>
   );
 };
 

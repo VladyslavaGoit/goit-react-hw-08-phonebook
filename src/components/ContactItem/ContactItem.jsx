@@ -8,7 +8,7 @@ export const ContactItem = ({ contact }) => {
   return (
     <>
       <p className={css.contactText}>
-        {contact.name}: {contact.phone}
+        {contact.name}: {contact.number}
       </p>
       <button className={css.contactButton} onClick={handleDelete}>
         Delete

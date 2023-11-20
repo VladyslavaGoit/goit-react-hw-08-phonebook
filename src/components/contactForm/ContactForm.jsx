@@ -22,7 +22,7 @@ const ContactForm = () => {
     dispatch(
       addContacts({
         name: newName,
-        phone: newNumber,
+        number: newNumber,
       })
     );
     evt.target.reset();
