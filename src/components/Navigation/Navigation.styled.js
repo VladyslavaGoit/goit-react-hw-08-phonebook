@@ -7,4 +7,8 @@ export const Wrapper = styled.div`
 `;
 export const StyledNavlink = styled(NavLink)`
   padding: 24px 0;
+  color: black;
+  &:hover {
+    color: rosybrown;
+  }
 `;
