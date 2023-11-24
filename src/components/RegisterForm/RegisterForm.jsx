@@ -1,4 +1,4 @@
-import { Button } from 'components/Button/Button';
+import { Button } from 'Components/Button/Button';
 import { useDispatch } from 'react-redux';
 import { register } from 'redux/auth/operations';
 import { Form, Label, Wrapper } from './RegisterForm.styled';

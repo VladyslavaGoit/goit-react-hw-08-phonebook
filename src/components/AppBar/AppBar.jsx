@@ -1,9 +1,9 @@
-import { AuthNav } from 'components/AuthNav/AuthNav';
-import { Container } from 'components/Container.styled';
-import { Navigation } from 'components/Navigation/Navigation';
+import { AuthNav } from 'Components/AuthNav/AuthNav';
+import { Container } from 'Components/Container.styled';
+import { Navigation } from 'Components/Navigation/Navigation';
 import { useSelector } from 'react-redux';
 import { selectIsLoggedIn } from 'redux/auth/selectors';
-import { UserMenu } from 'components/UserMenu/UserMenu';
+import { UserMenu } from 'Components/UserMenu/UserMenu';
 import { Header, Wrapper } from './AppBar.styled';
 
 export const AppBar = () => {

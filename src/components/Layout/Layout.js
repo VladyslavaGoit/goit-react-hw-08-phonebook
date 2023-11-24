@@ -1,5 +1,5 @@
-import { AppBar } from 'components/AppBar/AppBar';
-import { Footer } from 'components/Footer/Footer';
+import { AppBar } from 'Components/AppBar/AppBar';
+import { Footer } from 'Components/Footer/Footer';
 import { Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
 import { Wrapper } from './Layout.styled';

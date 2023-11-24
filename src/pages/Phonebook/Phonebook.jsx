@@ -2,10 +2,10 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchContacts } from 'redux/contacts/operations';
 import { getError, getIsLoading } from 'redux/contacts/selectors';
-import ContactForm from '../../components/ContactForm/ContactForm';
-import { ContactList } from '../../components/ContactList/ContactList';
-import Filter from '../../components/Filter/Filter';
-import { Container } from 'components/Container.styled';
+import ContactForm from '../../Components/ContactForm/ContactForm';
+import { ContactList } from '../../Components/ContactList/ContactList';
+import Filter from '../../Components/Filter/Filter';
+import { Container } from 'Components/Container.styled';
 import { Section, SubTitle, Title } from './Phonebook.styled';
 
 export default function Phonebook() {

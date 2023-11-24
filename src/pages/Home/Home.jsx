@@ -1,4 +1,4 @@
-import { Container } from 'components/Container.styled';
+import { Container } from 'Components/Container.styled';
 import { Section, SubTitle, Title } from './Home.styled';
 
 const Home = () => {

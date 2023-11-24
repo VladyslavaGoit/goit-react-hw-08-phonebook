@@ -2,7 +2,7 @@ import css from './ContactForm.module.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { getContacts } from 'redux/contacts/selectors';
 import { addContacts } from 'redux/contacts/operations';
-import { Button } from 'components/Button/Button';
+import { Button } from 'Components/Button/Button';
 
 const ContactForm = () => {
   const dispatch = useDispatch();

@@ -1,4 +1,4 @@
-import { Button } from 'components/Button/Button';
+import { Button } from 'Components/Button/Button';
 import { useDispatch, useSelector } from 'react-redux';
 import { logOut } from 'redux/auth/operations';
 import { selectUser } from 'redux/auth/selectors';

@@ -1,7 +1,7 @@
-import { Container } from 'components/Container.styled';
+import { Container } from 'Components/Container.styled';
 import { Section, Title } from './Login.styled';
 
-const { LoginForm } = require('components/LoginForm/LoginForm');
+const { LoginForm } = require('Components/LoginForm/LoginForm');
 
 const Login = () => {
   return (
