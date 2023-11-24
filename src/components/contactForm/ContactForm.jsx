@@ -2,6 +2,7 @@ import css from './ContactForm.module.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { getContacts } from 'redux/contacts/selectors';
 import { addContacts } from 'redux/contacts/operations';
+import { Button } from 'components/Button/Button';
 
 const ContactForm = () => {
   const dispatch = useDispatch();
@@ -53,9 +54,7 @@ const ContactForm = () => {
           required
         />
       </label>
-      <button className={css.contactButton} type="submit">
-        Add contact
-      </button>
+      <Button type="submit">Add contact</Button>
     </form>
   );
 };

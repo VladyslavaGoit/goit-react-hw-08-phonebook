@@ -8,12 +8,12 @@ export const Wrapper = styled.div`
 export const StyledNavlink = styled(NavLink)`
   position: relative;
   padding: 24px 0;
-  color: black;
+  color: rosybrown;
   &:hover {
-    color: rosybrown;
+    color: #f3baba;
   }
   &.active {
-    color: rosybrown;
+    color: #f3baba;
     &::after {
       content: '';
       position: absolute;
@@ -24,7 +24,7 @@ export const StyledNavlink = styled(NavLink)`
       width: 100%;
       height: 4px;
 
-      background-color: rosybrown;
+      background-color: #f3baba;
       border-radius: 2px;
       border: 1px solid black;
     }

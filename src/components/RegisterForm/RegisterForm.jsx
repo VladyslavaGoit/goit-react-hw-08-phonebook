@@ -1,5 +1,7 @@
+import { Button } from 'components/Button/Button';
 import { useDispatch } from 'react-redux';
 import { register } from 'redux/auth/operations';
+import { Form, Label, Wrapper } from './RegisterForm.styled';
 
 export const RegisterForm = () => {
   const dispatch = useDispatch();
@@ -12,20 +14,22 @@ export const RegisterForm = () => {
     event.target.reset();
   };
   return (
-    <form onSubmit={handleSubmit}>
-      <label>
-        UserName
-        <input type="text" name="name" />
-      </label>
-      <label>
-        Email
-        <input type="email" name="email" />
-      </label>
-      <label>
-        Password
-        <input type="password" name="password" />
-      </label>
-      <button type="submit">Register</button>
-    </form>
+    <Wrapper>
+      <Form onSubmit={handleSubmit}>
+        <Label>
+          UserName
+          <input type="text" name="name" />
+        </Label>
+        <Label>
+          Email
+          <input type="email" name="email" />
+        </Label>
+        <Label>
+          Password
+          <input type="password" name="password" />
+        </Label>
+        <Button type="submit">Register</Button>
+      </Form>
+    </Wrapper>
   );
 };

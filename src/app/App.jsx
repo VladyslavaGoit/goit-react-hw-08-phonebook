@@ -9,10 +9,10 @@ import { Route, Routes } from 'react-router-dom';
 import { refreshUser } from 'redux/auth/operations';
 import { selectIsRefreshing } from 'redux/auth/selectors';
 
-const HomePage = lazy(() => import('../pages/Home'));
-const ContactsPage = lazy(() => import('../pages/Phonebook'));
+const HomePage = lazy(() => import('../pages/Home/Home'));
+const ContactsPage = lazy(() => import('../pages/Phonebook/Phonebook'));
 const RegisterPage = lazy(() => import('../pages/Register'));
-const LoginPage = lazy(() => import('../pages/Login'));
+const LoginPage = lazy(() => import('../pages/Login/Login'));
 
 export const App = () => {
   const isRefreshing = useSelector(selectIsRefreshing);

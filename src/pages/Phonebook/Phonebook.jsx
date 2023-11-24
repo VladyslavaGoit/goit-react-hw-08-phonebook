@@ -2,11 +2,11 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchContacts } from 'redux/contacts/operations';
 import { getError, getIsLoading } from 'redux/contacts/selectors';
-import ContactForm from '../components/ContactForm/ContactForm';
-import { ContactList } from '../components/ContactList/ContactList';
-import Filter from '../components/Filter/Filter';
-import css from '../app/App.module.css';
+import ContactForm from '../../components/ContactForm/ContactForm';
+import { ContactList } from '../../components/ContactList/ContactList';
+import Filter from '../../components/Filter/Filter';
 import { Container } from 'components/Container.styled';
+import { Section, SubTitle, Title } from './Phonebook.styled';
 
 export default function Phonebook() {
   const dispatch = useDispatch();
@@ -18,16 +18,16 @@ export default function Phonebook() {
   }, [dispatch]);
 
   return (
-    <section>
+    <Section>
       <Container>
-        <h1 className={css.title}>Phonebook</h1>
+        <Title>Phonebook</Title>
         <ContactForm />
-        <h2 className={css.subTitle}>Contacts</h2>
+        <SubTitle>Contacts</SubTitle>
         <Filter />
         {isLoading && !error && <b>Request in progress...</b>}
         {!isLoading && error && <b>Something went wrong...</b>}
         <ContactList />
       </Container>
-    </section>
+    </Section>
   );
 }
