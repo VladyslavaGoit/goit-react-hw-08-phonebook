@@ -4,7 +4,6 @@ import * as Yup from 'yup';
 import { useDispatch } from 'react-redux';
 import { register } from 'redux/auth/operations';
 import { Button } from 'Components/Button/Button';
-import { Toaster } from 'react-hot-toast';
 
 const RegisterSchema = Yup.object().shape({
   name: Yup.string()
@@ -52,7 +51,6 @@ export const RegisterForm = () => {
           </Label>
 
           <Button type="submit">Register</Button>
-          <Toaster />
         </StyledForm>
       </Formik>
     </Wrapper>
