@@ -11,3 +11,7 @@ export const Title = styled.h1`
 export const SubTitle = styled.h2`
   margin-bottom: 25px;
 `;
+
+export const RequestInfo = styled.p`
+  margin-bottom: 30px;
+`;

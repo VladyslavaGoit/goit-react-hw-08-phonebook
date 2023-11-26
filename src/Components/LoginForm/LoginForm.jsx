@@ -10,6 +10,7 @@ export const LoginForm = () => {
     const email = evt.target.elements.email.value;
     const password = evt.target.elements.password.value;
     dispatch(logIn({ email, password }));
+    evt.target.reset();
   };
   return (
     <Form onSubmit={handleSubmit}>

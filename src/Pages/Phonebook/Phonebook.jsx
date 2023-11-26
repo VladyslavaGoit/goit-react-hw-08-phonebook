@@ -6,7 +6,7 @@ import ContactForm from '../../Components/ContactForm/ContactForm';
 import { ContactList } from '../../Components/ContactList/ContactList';
 import Filter from '../../Components/Filter/Filter';
 import { Container } from 'Components/Container.styled';
-import { Section, SubTitle, Title } from './Phonebook.styled';
+import { RequestInfo, Section, SubTitle, Title } from './Phonebook.styled';
 
 export default function Phonebook() {
   const dispatch = useDispatch();
@@ -24,8 +24,12 @@ export default function Phonebook() {
         <ContactForm />
         <SubTitle>Contacts</SubTitle>
         <Filter />
-        {isLoading && !error && <b>Request in progress...</b>}
-        {!isLoading && error && <b>Something went wrong...</b>}
+        {isLoading && !error && (
+          <RequestInfo>Request in progress...</RequestInfo>
+        )}
+        {!isLoading && error && (
+          <RequestInfo>Something went wrong...</RequestInfo>
+        )}
         <ContactList />
       </Container>
     </Section>
