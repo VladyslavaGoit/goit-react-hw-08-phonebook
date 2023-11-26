@@ -1,35 +1,61 @@
-import { Button } from 'Components/Button/Button';
+import { Formik, Field } from 'formik';
+import { StyledForm, StyledError, Label, Wrapper } from './RegisterForm.styled';
+import * as Yup from 'yup';
 import { useDispatch } from 'react-redux';
 import { register } from 'redux/auth/operations';
-import { Form, Label, Wrapper } from './RegisterForm.styled';
+import { Button } from 'Components/Button/Button';
+import { Toaster } from 'react-hot-toast';
+
+const RegisterSchema = Yup.object().shape({
+  name: Yup.string()
+    .max(30, 'Must be 30 characters or less')
+    .required('Required!'),
+  email: Yup.string().email('Invalid email address').required('Required!'),
+  password: Yup.string()
+    .min(8, 'Password is too short - should be 8 chars minimum.')
+    .required('Required!'),
+});
 
 export const RegisterForm = () => {
   const dispatch = useDispatch();
-  const handleSubmit = event => {
-    event.preventDefault();
-    const name = event.target.elements.name.value;
-    const email = event.target.elements.email.value;
-    const password = event.target.elements.password.value;
-    dispatch(register({ name, email, password }));
-    event.target.reset();
-  };
+
   return (
     <Wrapper>
-      <Form onSubmit={handleSubmit}>
-        <Label>
-          UserName
-          <input type="text" name="name" />
-        </Label>
-        <Label>
-          Email
-          <input type="email" name="email" />
-        </Label>
-        <Label>
-          Password
-          <input type="password" name="password" />
-        </Label>
-        <Button type="submit">Register</Button>
-      </Form>
+      <Formik
+        initialValues={{
+          name: '',
+          email: '',
+          password: '',
+        }}
+        validationSchema={RegisterSchema}
+        onSubmit={(values, actions) => {
+          console.log(values);
+          dispatch(register(values));
+          actions.resetForm();
+        }}
+      >
+        <StyledForm>
+          <Label>
+            UserName
+            <Field name="name" type="text" />
+            <StyledError name="name" component="div" />
+          </Label>
+          <Label>
+            Email
+            <Field name="email" type="email" />
+            <StyledError name="email" component="div" />
+          </Label>
+
+          <Label>
+            Password
+            <Field name="password" type="password" />
+            <StyledError name="password" component="div" />
+          </Label>
+
+          <Button type="submit">Register</Button>
+          <Toaster />
+        </StyledForm>
+      </Formik>
     </Wrapper>
   );
 };

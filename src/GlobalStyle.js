@@ -1,6 +1,10 @@
 import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyle = createGlobalStyle`
+body{
+  font-size: 19px;
+}
+
   ul {
     list-style: none;
     margin: 0;

@@ -15,6 +15,7 @@ export const StyledNavlink = styled(NavLink)`
   }
   &.active {
     color: #f3baba;
+    text-shadow: 1px 1px 2px rosybrown;
     &::after {
       content: '';
       position: absolute;

@@ -1,10 +1,10 @@
+import { Form, ErrorMessage } from 'formik';
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
-  padding: 30px 0;
+  padding: 100px 0;
 `;
-
-export const Form = styled.form`
+export const StyledForm = styled(Form)`
   margin: 0 auto;
   max-width: 400px;
   display: flex;
@@ -24,4 +24,9 @@ export const Label = styled.label`
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
   }
+`;
+
+export const StyledError = styled(ErrorMessage)`
+  color: #b02e2e;
+  font-size: 14px;
 `;
