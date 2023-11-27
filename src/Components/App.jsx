@@ -9,11 +9,11 @@ import { Route, Routes } from 'react-router-dom';
 import { refreshUser } from 'redux/auth/operations';
 import { selectIsRefreshing } from 'redux/auth/selectors';
 
-const HomePage = lazy(() => import('../../Pages/Home/Home'));
-const ContactsPage = lazy(() => import('../../Pages/Phonebook/Phonebook'));
-const RegisterPage = lazy(() => import('../../Pages/Register'));
-const LoginPage = lazy(() => import('../../Pages/Login/Login'));
-const NotFound = lazy(() => import('../../Pages/NotFound/NotFound'));
+const HomePage = lazy(() => import('../Pages/Home/Home'));
+const ContactsPage = lazy(() => import('../Pages/Phonebook/Phonebook'));
+const RegisterPage = lazy(() => import('../Pages/Register'));
+const LoginPage = lazy(() => import('../Pages/Login/Login'));
+const NotFound = lazy(() => import('../Pages/NotFound/NotFound'));
 
 export const App = () => {
   const isRefreshing = useSelector(selectIsRefreshing);
