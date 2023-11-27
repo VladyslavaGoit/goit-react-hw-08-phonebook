@@ -7,8 +7,7 @@ import { Button } from 'Components/Button/Button';
 
 const RegisterSchema = Yup.object().shape({
   name: Yup.string()
-    .max(30, 'Must be 30 characters or less')
-    .required('Required!'),
+  .required('Required!'),
   email: Yup.string().email('Invalid email address').required('Required!'),
   password: Yup.string()
     .min(8, 'Password is too short - should be 8 chars minimum.')
@@ -28,6 +27,7 @@ export const RegisterForm = () => {
         }}
         validationSchema={RegisterSchema}
         onSubmit={(values, actions) => {
+          console.log(values);
           dispatch(register(values));
           actions.resetForm();
         }}
