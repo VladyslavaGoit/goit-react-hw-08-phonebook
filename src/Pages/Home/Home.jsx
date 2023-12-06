@@ -1,12 +1,16 @@
 import { Container } from 'Components/Container.styled';
-import { Section, SubTitle, Title } from './Home.styled';
+import { Section, SubTitle, TextWrapper, Title } from './Home.styled';
 
 const Home = () => {
   return (
     <Section>
       <Container>
-        <Title>Your Phonebook</Title>
-        <SubTitle>Keep your contacts handy!</SubTitle>
+        <TextWrapper>
+          <Title>Keep your contacts handy</Title>
+          <SubTitle>
+            User-friendly phone book app for effortless contact management.
+          </SubTitle>
+        </TextWrapper>
       </Container>
     </Section>
   );

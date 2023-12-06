@@ -1,8 +1,9 @@
 import styled from 'styled-components';
 
 export const Header = styled.header`
-  background-color: black;
-  border-bottom: 1px solid rgba(33, 33, 33, 0.2);
+  position: fixed;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
 `;
 
 export const Wrapper = styled.div`
