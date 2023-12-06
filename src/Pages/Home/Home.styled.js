@@ -5,7 +5,7 @@ export const Section = styled.section`
   background-size: cover;
   background-position: right top -50px;
   padding-top: 100px;
-  padding-bottom: 300px;
+  padding-bottom: 400px;
 `;
 export const TextWrapper = styled.div`
   position: relative;
