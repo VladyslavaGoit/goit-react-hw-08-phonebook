@@ -6,7 +6,7 @@ export const StyledButton = styled.button`
   justify-content: center;
   padding: 8px 12px;
   width: 150px;
-  border-radius: 4px;
+  border-radius: 10px;
   border: none;
   font: inherit;
   cursor: pointer;

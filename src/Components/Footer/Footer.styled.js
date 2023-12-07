@@ -3,7 +3,13 @@ import { FaTelegram } from 'react-icons/fa';
 import styled from 'styled-components';
 
 export const StyledFooter = styled.footer`
-  background-color: black;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(26, 24, 24, 1) 89%,
+    rgba(31, 27, 27, 1) 100%
+  );
 `;
 export const StyledIconLn = styled(FaLinkedin)`
   fill: rosybrown;

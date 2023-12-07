@@ -1,9 +1,13 @@
 import styled from 'styled-components';
 
 export const Section = styled.section`
+  max-width: 1600px;
+  margin: 0 auto;
   background-image: url('https://images.unsplash.com/uploads/1413222992504f1b734a6/1928e537?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
   background-size: cover;
   background-position: right top -50px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   padding-top: 100px;
   padding-bottom: 400px;
 `;
