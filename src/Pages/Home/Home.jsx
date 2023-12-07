@@ -8,7 +8,8 @@ const Home = () => {
         <TextWrapper>
           <Title>Keep your contacts handy</Title>
           <SubTitle>
-            User-friendly phone book app for effortless contact management.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis
+            ex unde repellendus totam voluptatum, incidunt
           </SubTitle>
         </TextWrapper>
       </Container>

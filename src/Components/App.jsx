@@ -12,7 +12,7 @@ import { Refreshing } from './Refreshing/Refreshing';
 
 const HomePage = lazy(() => import('../Pages/Home/Home'));
 const ContactsPage = lazy(() => import('../Pages/Phonebook/Phonebook'));
-const RegisterPage = lazy(() => import('../Pages/Register'));
+const RegisterPage = lazy(() => import('../Pages/Register/Register'));
 const LoginPage = lazy(() => import('../Pages/Login/Login'));
 const NotFound = lazy(() => import('../Pages/NotFound/NotFound'));
 

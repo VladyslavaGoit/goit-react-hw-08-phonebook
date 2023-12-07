@@ -16,11 +16,12 @@ export const Label = styled.label`
 
   & > input {
     height: 50px;
-    background-color: rgba(255, 255, 255, 0.8);
-    border: 1px solid rgba(33, 33, 33, 0.2);
+    background-color: ${p => p.theme.colors.lightBckg};
+    border: 1px solid ${p => p.theme.colors.accentText};
     border-radius: 10px;
     &:focus {
-      border-color: rgba(0, 0, 0, 0.5);
+      border-color: ${p => p.theme.colors.accentBckg};
+      box-shadow: 0px 2px 5px 0px ${p => p.theme.colors.secondBckg};
       outline: none;
     }
   }
@@ -31,7 +32,7 @@ export const Text = styled.p`
 `;
 
 export const StyledLink = styled(Link)`
-  color: white;
+  color: ${p => p.theme.colors.lightBckg};
   &:hover {
     text-decoration: underline;
   }

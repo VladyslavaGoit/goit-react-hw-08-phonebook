@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 
 export const Section = styled.section`
-  padding: 50px 0;
+  padding: 100px 15px 50px 15px;
+  background-color: ${p => p.theme.colors.primaryBckg};
 `;
 
 export const Title = styled.h1`

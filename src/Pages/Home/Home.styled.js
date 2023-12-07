@@ -13,7 +13,7 @@ export const Section = styled.section`
 `;
 export const TextWrapper = styled.div`
   position: relative;
-  background-color: rgba(0, 0, 0, 0.62);
+  background-color: ${p => p.theme.colors.secondBckg};
   width: 400px;
   padding: 15px;
 
@@ -24,7 +24,7 @@ export const TextWrapper = styled.div`
     left: -30px;
     width: 0;
     height: 0;
-    border-bottom: 15px solid rgba(0, 0, 0, 0.6);
+    border-bottom: 15px solid ${p => p.theme.colors.secondBckg};
     border-left: 30.5px solid transparent;
   }
 `;
@@ -32,7 +32,7 @@ export const Title = styled.h1`
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: 28px;
   margin-bottom: 25px;
-  color: pink;
+  color: ${p => p.theme.colors.accentText};
   text-shadow: 2px 2px 4px #000000;
 `;
 
@@ -41,6 +41,6 @@ export const SubTitle = styled.p`
   font-weight: 500;
   font-size: 16px;
   letter-spacing: 0.06em;
-  color: white;
-  text-shadow: 2px 2px 4px #ffffff;
+  color: ${p => p.theme.colors.subTitleText};
+  text-shadow: 2px 2px 4px ${p => p.theme.colors.secondBckg};
 `;

@@ -12,7 +12,7 @@ export const Label = styled.label`
   margin-bottom: 40px;
   & > input {
     height: 40px;
-    border: 1px solid rgba(33, 33, 33, 0.2);
+    border: 1px solid ${p => p.theme.colors.secondBckg};
     border-radius: 4px;
   }
 `;

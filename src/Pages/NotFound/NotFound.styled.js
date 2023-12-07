@@ -1,6 +1,9 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
+export const Section = styled.section`
+  background-color: ${p => p.theme.colors.primaryBckg};
+`;
 export const Wrapper = styled.div`
   padding: 100px 0;
   display: flex;
@@ -21,10 +24,12 @@ export const StyledLink = styled(Link)`
   align-items: center;
   height: 40px;
   width: 190px;
-  background-color: black;
-  color: rosybrown;
+  background-color: ${p => p.theme.colors.secondBckg};
+  color: ${p => p.theme.colors.accentText};
+  border-radius: 4px;
   &:hover {
-    background-color: white;
-    color: #b28a8a;
+    background-color: ${p => p.theme.colors.primaryBckg};
+    color: ${p => p.theme.colors.secondBckg};
+    box-shadow: 0px 2px 5px 0px ${p => p.theme.colors.secondBckg};
   }
 `;

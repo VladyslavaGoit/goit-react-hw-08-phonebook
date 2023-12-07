@@ -8,13 +8,13 @@ export const Wrapper = styled.div`
 export const StyledNavlink = styled(NavLink)`
   position: relative;
   padding: 24px 0;
-  color: rosybrown;
+  color: ${p => p.theme.colors.primaryText};
   &:hover {
-    color: #f3baba;
+    color: ${p => p.theme.colors.accentText};
   }
   &.active {
-    color: #f3baba;
-    text-shadow: 1px 1px 2px rosybrown;
+    color: ${p => p.theme.colors.accentText};
+    text-shadow: 1px 1px 2px ${p => p.theme.colors.primaryText};
     &::after {
       content: '';
       position: absolute;
@@ -25,9 +25,9 @@ export const StyledNavlink = styled(NavLink)`
       width: 100%;
       height: 4px;
 
-      background-color: #f3baba;
+      background-color: ${p => p.theme.colors.accentText};
       border-radius: 2px;
-      border: 1px solid black;
+      box-shadow: 0px 1px 5px 0px ${p => p.theme.colors.secondBckg};
     }
   }
 `;

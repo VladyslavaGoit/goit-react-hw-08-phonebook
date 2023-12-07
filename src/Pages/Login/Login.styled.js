@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { IoIosPhonePortrait } from 'react-icons/io';
 
 export const Section = styled.section`
-  background-color: rosybrown;
+  background-color: ${p => p.theme.colors.primaryBckg};
   padding: 120px 20px;
 `;
 
@@ -23,5 +23,5 @@ export const StyledIcon = styled(IoIosPhonePortrait)`
   position: relative;
   width: 450px;
   height: 450px;
-  fill: rgba(0, 0, 0, 0.8);
+  fill: ${p => p.theme.colors.secondBckg};
 `;

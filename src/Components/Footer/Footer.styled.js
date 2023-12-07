@@ -16,15 +16,15 @@ export const StyledIconLn = styled(FaLinkedin)`
   width: 25px;
   height: 25px;
   &:hover {
-    fill: #f3baba;
+    fill: ${p => p.theme.colors.accentText};
   }
 `;
 export const StyledIconTelegram = styled(FaTelegram)`
-  fill: rosybrown;
+  fill: ${p => p.theme.colors.primaryText};
   width: 25px;
   height: 25px;
   &:hover {
-    fill: #f3baba;
+    fill: ${p => p.theme.colors.accentText};
   }
 `;
 export const Wrapper = styled.div`

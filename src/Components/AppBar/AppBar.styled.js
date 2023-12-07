@@ -1,14 +1,14 @@
 import styled from 'styled-components';
 
 export const Header = styled.header`
-  position: fixed;
+  position: absolute;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: ${p => p.theme.colors.secondBckg};
 `;
 
 export const Wrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  color: rosybrown;
+  color: ${p => p.theme.colors.primaryText};
 `;

@@ -22,38 +22,38 @@ export const StyledNavlink = styled(NavLink)`
   align-items: center;
   gap: 5px;
   padding: 24px 0;
-  color: rosybrown;
-  &:hover:not(:active) {
-    color: #f3baba;
+  color: ${p => p.theme.colors.primaryText};
+  &:hover {
+    color: ${p => p.theme.colors.accentText};
     & ${SignUpIcon} {
-      background-color: rgba(255, 169, 169, 0.8);
-      fill: black;
+      background-color: ${p => p.theme.colors.accentBckg};
+      fill: ${p => p.theme.colors.accentIcon};
       border-radius: 4px;
     }
     & ${SignInIcon} {
-      background-color: rgba(255, 169, 169, 0.8);
-      fill: black;
+      background-color: ${p => p.theme.colors.accentBckg};
+      fill: ${p => p.theme.colors.accentIcon};
       border-radius: 4px;
     }
   }
 
   &.active {
-    color: #f3baba;
+    color: ${p => p.theme.colors.accentText};
     text-shadow: 1px 1px 2px rosybrown;
 
     &::after {
       content: '';
       position: absolute;
       left: 0;
-      bottom: -1px;
+      bottom: 0;
 
       display: block;
-      width: 100%;
+      width: 110%;
       height: 4px;
 
-      background-color: #f3baba;
+      background-color: ${p => p.theme.colors.accentText};
       border-radius: 2px;
-      border: 1px solid black;
+      box-shadow: 0px 1px 5px 0px ${p => p.theme.colors.secondBckg};
     }
   }
 `;

@@ -10,9 +10,6 @@ export const StyledForm = styled(Form)`
   display: flex;
   flex-direction: column;
   gap: 20px;
-  & > button {
-    margin: 0 auto;
-  }
 `;
 
 export const Label = styled.label`
@@ -20,13 +17,14 @@ export const Label = styled.label`
   flex-direction: column;
   gap: 10px;
   & > input {
-    height: 40px;
-    border: 1px solid rgba(33, 33, 33, 0.2);
-    border-radius: 4px;
+    height: 50px;
+    background-color: ${p => p.theme.colors.lightBckg};
+    border: 1px solid ${p => p.theme.colors.accentText};
+    border-radius: 10px;
   }
 `;
 
 export const StyledError = styled(ErrorMessage)`
-  color: #b02e2e;
+  color: ${p => p.theme.colors.secondBckg};
   font-size: 14px;
 `;
