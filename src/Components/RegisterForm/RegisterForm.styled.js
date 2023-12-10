@@ -21,10 +21,16 @@ export const Label = styled.label`
   flex-direction: column;
   gap: 10px;
   & > input {
-    height: 50px;
+    padding: 20px;
+    font-size: 14px;
     background-color: ${p => p.theme.colors.lightBckg};
+    color: ${p => p.theme.colors.primaryText};
     border: 1px solid ${p => p.theme.colors.accentText};
     border-radius: 10px;
+    &:focus {
+      outline: none;
+      box-shadow: 0px 2px 5px 0px ${p => p.theme.colors.secondBckg};
+    }
   }
 `;
 

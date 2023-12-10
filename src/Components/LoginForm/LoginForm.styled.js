@@ -15,7 +15,7 @@ export const Label = styled.label`
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 
   & > input {
-    height: 50px;
+    padding: 20px;
     background-color: ${p => p.theme.colors.lightBckg};
     border: 1px solid ${p => p.theme.colors.accentText};
     border-radius: 10px;

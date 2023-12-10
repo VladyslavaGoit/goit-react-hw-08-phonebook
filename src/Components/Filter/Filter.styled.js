@@ -11,8 +11,12 @@ export const Label = styled.label`
   gap: 15px;
   margin-bottom: 40px;
   & > input {
-    height: 40px;
-    border: 1px solid ${p => p.theme.colors.secondBckg};
-    border-radius: 4px;
+    padding: 15px;
+    border: 1px solid ${p => p.theme.colors.lightBckg};
+    border-radius: 10px;
+    &:focus {
+      outline: none;
+      box-shadow: 1px 3px 5px 0px ${p => p.theme.colors.secondBckg};
+    }
   }
 `;

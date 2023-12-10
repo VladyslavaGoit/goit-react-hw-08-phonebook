@@ -31,9 +31,8 @@ const ContactForm = () => {
   };
 
   return (
-    <StyledForm onSubmit={handleSubmit}>
+    <StyledForm onSubmit={handleSubmit} autoComplete="off">
       <Label>
-        {' '}
         Name
         <input
           type="text"
