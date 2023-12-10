@@ -19,9 +19,14 @@ export const register = createAsyncThunk(
       const response = await toast.promise(
         axios.post('/users/signup', credentials),
         {
-          loading: 'Saving...',
-          success: <b>Settings saved!</b>,
-          error: <b>Could not save.</b>,
+          loading: 'Registers...',
+          success: <b>Registered!</b>,
+          error: (
+            <b>
+              Something went wrong. There may already be a user with this email
+              address.
+            </b>
+          ),
         }
       );
       setAuthHeader(response.data.token);
