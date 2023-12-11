@@ -1,25 +1,35 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { getContacts } from 'redux/contacts/selectors';
+import { getContacts, getIsTryAdd } from 'redux/contacts/selectors';
 import { addContacts } from 'redux/contacts/operations';
 import { Button } from 'Components/Button/Button';
 import { Label, StyledForm } from './ContactForm.styled';
 import toast, { Toaster } from 'react-hot-toast';
+import { ThreeDots } from 'react-loader-spinner';
 
 const ContactForm = () => {
   const dispatch = useDispatch();
   const contacts = useSelector(getContacts);
+  const isTryAdd = useSelector(getIsTryAdd);
+
   const handleSubmit = evt => {
     evt.preventDefault();
     const newName = evt.target.elements.name.value;
     const newNumber = evt.target.elements.number.value;
-    const isSameContact = contacts.find(
-      ({ name, number }) =>
-        name.toLowerCase().trim() === newName.toLowerCase().trim() ||
-        number === newNumber
+    const isSameName = contacts.find(
+      ({ name }) => name.toLowerCase().trim() === newName.toLowerCase().trim()
     );
-    if (isSameContact) {
-      evt.target.reset();
-      return toast(`"${newName}" is already in contacts`);
+    const isSameNumber = contacts.find(({ number }) => number === newNumber);
+
+    if (isSameName) {
+      return toast(
+        `Contact with this name already exists.
+        Please use a different name.`
+      );
+    }
+    if (isSameNumber) {
+      return toast(
+        `Contact with this number already exists. Please enter a new number.`
+      );
     }
     dispatch(
       addContacts({
@@ -52,7 +62,22 @@ const ContactForm = () => {
           required
         />
       </Label>
-      <Button type="submit">Add contact</Button>
+      <Button type="submit" disabled={isTryAdd}>
+        {isTryAdd ? (
+          <ThreeDots
+            height="20px"
+            width="40px"
+            radius="9"
+            color="#F3C653"
+            ariaLabel="three-dots-loading"
+            wrapperStyle={{}}
+            wrapperClassName=""
+            visible={true}
+          />
+        ) : (
+          'Add contact'
+        )}
+      </Button>
       <Toaster />
     </StyledForm>
   );

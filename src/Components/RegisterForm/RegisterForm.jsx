@@ -6,6 +6,7 @@ import {
   Wrapper,
   Text,
   StyledLink,
+  TitleForm,
 } from './RegisterForm.styled';
 import * as Yup from 'yup';
 import { useDispatch } from 'react-redux';
@@ -53,6 +54,7 @@ export const RegisterForm = () => {
         }}
       >
         <StyledForm>
+          <TitleForm>Sign Up</TitleForm>
           <Label>
             Name
             <Field name="name" type="text" />
@@ -70,7 +72,7 @@ export const RegisterForm = () => {
             <StyledError name="password" component="div" />
           </Label>
 
-          <Button type="submit">Register</Button>
+          <Button type="submit">Create account</Button>
           <Text>
             Already have an account?{' '}
             <StyledLink to={'/login'}>Sign in</StyledLink>

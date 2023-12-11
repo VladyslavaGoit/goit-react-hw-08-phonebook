@@ -1,11 +1,12 @@
 import { Container } from 'Components/Container.styled';
-// import { FaLinkedin } from 'react-icons/fa';
 import {
   Box,
   ContactList,
   StyledFooter,
   StyledIconLn,
   StyledIconTelegram,
+  Text,
+  Title,
   Wrapper,
 } from './Footer.styled';
 
@@ -15,11 +16,11 @@ export const Footer = () => {
       <Container>
         <Wrapper>
           <Box>
-            <h2>Phonebook</h2>
-            <p>Adds your contacts!</p>
+            <Title>Phonebook</Title>
+            <Text>Adds your contacts</Text>
           </Box>
           <Box>
-            <p>by Vladyslava Dulembova</p>
+            <Text>by Vladyslava Dulembova</Text>
             <ContactList>
               <li>
                 <a

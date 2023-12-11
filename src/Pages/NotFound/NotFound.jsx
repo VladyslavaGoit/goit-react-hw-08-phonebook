@@ -1,6 +1,11 @@
 import { useLocation } from 'react-router-dom';
-import { Section, StyledLink, TextInfo, Wrapper } from './NotFound.styled';
-import { HiArrowLeft } from 'react-icons/hi';
+import {
+  ArrowIcon,
+  Section,
+  StyledLink,
+  TextInfo,
+  Wrapper,
+} from './NotFound.styled';
 import { Container } from 'Components/Container.styled';
 
 const NotFound = () => {
@@ -15,7 +20,8 @@ const NotFound = () => {
             server <br /> <br /> ༼ つ ◕_◕ ༽つ
           </TextInfo>
           <StyledLink to="/">
-            <HiArrowLeft size={20} /> <span>Back to Home</span>
+            <ArrowIcon />
+            <span>Back to Home</span>
           </StyledLink>
         </Wrapper>
       </Container>{' '}

@@ -11,15 +11,16 @@ import { ThemeProvider } from 'styled-components';
 
 const theme = {
   colors: {
-    primaryText: 'rosybrown',
-    titleText: 'white',
-    subTitleText: 'white',
-    accentText: '#f3baba',
+    primaryText: '#000000',
+    secondaryText: '#7a7a7a',
+    titleText: '#494848',
+    subTitleText: '#B4B4B4',
+    accentText: '#F3C653',
     accentIcon: 'black',
-    primaryBckg: 'rosybrown',
-    secondBckg: 'rgba(0, 0, 0, 0.6)',
-    lightBckg: 'rgba(255, 255, 255, 0.8)',
-    accentBckg: 'rgba(255, 169, 169, 0.8)',
+    primaryBckg: '#FFFEF9',
+    secondBckg: '#242424',
+    lightBckg: '#E8E8E1',
+    accentBckg: '#F3C653',
   },
 };
 

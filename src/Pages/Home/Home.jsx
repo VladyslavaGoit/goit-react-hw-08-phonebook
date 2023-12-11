@@ -1,16 +1,28 @@
 import { Container } from 'Components/Container.styled';
-import { Section, SubTitle, TextWrapper, Title } from './Home.styled';
+import {
+  ArrowIcon,
+  Section,
+  StyledLink,
+  SubTitle,
+  Text,
+  TextWrapper,
+  Title,
+} from './Home.styled';
 
 const Home = () => {
   return (
     <Section>
       <Container>
         <TextWrapper>
-          <Title>Keep your contacts handy</Title>
-          <SubTitle>
+          <SubTitle>Keep your contacts handy</SubTitle>
+          <Title>Phonebook</Title>
+          <Text>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis
             ex unde repellendus totam voluptatum, incidunt
-          </SubTitle>
+          </Text>
+          <StyledLink to="/contacts">
+            My Contacts <ArrowIcon />
+          </StyledLink>
         </TextWrapper>
       </Container>
     </Section>

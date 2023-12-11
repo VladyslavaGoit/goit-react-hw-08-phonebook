@@ -1,20 +1,54 @@
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
+import { BsBookmarksFill } from 'react-icons/bs';
+import { SlCallEnd } from 'react-icons/sl';
 
-export const Wrapper = styled.div`
+export const IconHome = styled(BsBookmarksFill)`
+  padding: 2px;
+  width: 20px;
+  height: 20px;
+`;
+
+export const IconPhone = styled(SlCallEnd)`
+  padding: 2px;
+  width: 20px;
+  height: 20px;
+`;
+
+export const NavWrap = styled.nav`
   display: flex;
-  gap: 35px;
+  gap: 50px;
 `;
 export const StyledNavlink = styled(NavLink)`
   position: relative;
+  display: flex;
+  align-items: center;
+  gap: 5px;
   padding: 24px 0;
   color: ${p => p.theme.colors.primaryText};
   &:hover {
-    color: ${p => p.theme.colors.accentText};
+    & ${IconHome} {
+      background-color: ${p => p.theme.colors.accentBckg};
+      fill: ${p => p.theme.colors.accentIcon};
+      border-radius: 4px;
+    }
+    & ${IconPhone} {
+      background-color: ${p => p.theme.colors.accentBckg};
+      fill: ${p => p.theme.colors.accentIcon};
+      border-radius: 4px;
+    }
   }
   &.active {
-    color: ${p => p.theme.colors.accentText};
-    text-shadow: 1px 1px 2px ${p => p.theme.colors.primaryText};
+    & ${IconHome} {
+      background-color: ${p => p.theme.colors.accentBckg};
+      fill: ${p => p.theme.colors.accentIcon};
+      border-radius: 4px;
+    }
+    & ${IconPhone} {
+      background-color: ${p => p.theme.colors.accentBckg};
+      fill: ${p => p.theme.colors.accentIcon};
+      border-radius: 4px;
+    }
     &::after {
       content: '';
       position: absolute;
@@ -27,7 +61,7 @@ export const StyledNavlink = styled(NavLink)`
 
       background-color: ${p => p.theme.colors.accentText};
       border-radius: 2px;
-      box-shadow: 0px 1px 5px 0px ${p => p.theme.colors.secondBckg};
+      box-shadow: 0px 1px 2px 0px ${p => p.theme.colors.secondBckg};
     }
   }
 `;

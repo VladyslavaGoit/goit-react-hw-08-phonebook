@@ -6,7 +6,7 @@ const Filter = () => {
 
   return (
     <Label>
-      Find contacts by name:
+      Find contacts by name
       <input
         type="text"
         onChange={evt => dispatch(setFilter(evt.target.value))}

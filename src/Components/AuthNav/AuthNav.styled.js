@@ -10,10 +10,14 @@ export const Wrapper = styled.div`
 
 export const SignUpIcon = styled(SiGnuprivacyguard)`
   padding: 2px;
+  width: 20px;
+  height: 20px;
 `;
 
 export const SignInIcon = styled(IoIosExit)`
   padding: 2px;
+  width: 20px;
+  height: 20px;
 `;
 
 export const StyledNavlink = styled(NavLink)`
@@ -24,7 +28,6 @@ export const StyledNavlink = styled(NavLink)`
   padding: 24px 0;
   color: ${p => p.theme.colors.primaryText};
   &:hover {
-    color: ${p => p.theme.colors.accentText};
     & ${SignUpIcon} {
       background-color: ${p => p.theme.colors.accentBckg};
       fill: ${p => p.theme.colors.accentIcon};
@@ -38,9 +41,16 @@ export const StyledNavlink = styled(NavLink)`
   }
 
   &.active {
-    color: ${p => p.theme.colors.accentText};
-    text-shadow: 1px 1px 2px rosybrown;
-
+    & ${SignUpIcon} {
+      background-color: ${p => p.theme.colors.accentBckg};
+      fill: ${p => p.theme.colors.accentIcon};
+      border-radius: 4px;
+    }
+    & ${SignInIcon} {
+      background-color: ${p => p.theme.colors.accentBckg};
+      fill: ${p => p.theme.colors.accentIcon};
+      border-radius: 4px;
+    }
     &::after {
       content: '';
       position: absolute;
@@ -53,7 +63,7 @@ export const StyledNavlink = styled(NavLink)`
 
       background-color: ${p => p.theme.colors.accentText};
       border-radius: 2px;
-      box-shadow: 0px 1px 5px 0px ${p => p.theme.colors.secondBckg};
+      box-shadow: 0px 1px 2px 0px ${p => p.theme.colors.secondBckg};
     }
   }
 `;

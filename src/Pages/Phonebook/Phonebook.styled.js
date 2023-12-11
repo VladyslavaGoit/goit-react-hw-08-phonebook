@@ -1,16 +1,17 @@
 import styled from 'styled-components';
 
 export const Section = styled.section`
-  padding: 100px 15px 50px 15px;
+  padding: 150px 0 50px 0;
   background-color: ${p => p.theme.colors.primaryBckg};
-`;
-
-export const Title = styled.h1`
-  margin-bottom: 25px;
 `;
 
 export const SubTitle = styled.h2`
   margin-bottom: 25px;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 500;
+  font-size: 32px;
+  letter-spacing: 0.06em;
+  color: ${p => p.theme.colors.subTitleText};
 `;
 
 export const RequestInfo = styled.p`
