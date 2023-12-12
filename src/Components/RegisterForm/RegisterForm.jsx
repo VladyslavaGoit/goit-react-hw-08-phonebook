@@ -7,6 +7,7 @@ import {
   Text,
   StyledLink,
   TitleForm,
+  ErrorIcon,
 } from './RegisterForm.styled';
 import * as Yup from 'yup';
 import { useDispatch } from 'react-redux';
@@ -79,7 +80,18 @@ export const RegisterForm = () => {
           </Text>
         </StyledForm>
       </Formik>
-      <Toaster />
+      <Toaster
+        toastOptions={{
+          style: {
+            gap: '10px',
+            background: '#FFFEF9',
+          },
+          error: {
+            duration: 5000,
+            icon: <ErrorIcon />,
+          },
+        }}
+      />
     </Wrapper>
   );
 };

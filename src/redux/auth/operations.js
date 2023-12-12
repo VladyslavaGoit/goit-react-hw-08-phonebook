@@ -22,10 +22,11 @@ export const register = createAsyncThunk(
           loading: 'Registers...',
           success: <b>Registered!</b>,
           error: (
-            <b>
-              Something went wrong. There may already be a user with this email
-              address.
-            </b>
+            <>
+              <b>
+                Oops... This email address already in use. Please try again.
+              </b>
+            </>
           ),
         }
       );

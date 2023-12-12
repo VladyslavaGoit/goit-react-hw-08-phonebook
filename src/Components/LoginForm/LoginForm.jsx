@@ -9,6 +9,7 @@ import {
   StyledLink,
   Text,
   StyledError,
+  ErrorIcon,
 } from './LoginForm.styled';
 import { Toaster } from 'react-hot-toast';
 
@@ -64,7 +65,18 @@ export const LoginForm = () => {
           </Text>
         </StyledForm>
       </Formik>
-      <Toaster />
+      <Toaster
+        toastOptions={{
+          style: {
+            gap: '10px',
+            background: '#FFFEF9',
+          },
+          error: {
+            duration: 5000,
+            icon: <ErrorIcon />,
+          },
+        }}
+      />
     </>
   );
 };

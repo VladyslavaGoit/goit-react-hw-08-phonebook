@@ -1,6 +1,7 @@
 import { Form, ErrorMessage } from 'formik';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import { BsDashCircleFill } from 'react-icons/bs';
 
 export const Wrapper = styled.div`
   padding: 50px 0;
@@ -63,4 +64,10 @@ export const StyledLink = styled(Link)`
 export const StyledError = styled(ErrorMessage)`
   color: ${p => p.theme.colors.subTitleText};
   font-size: 16px;
+`;
+
+export const ErrorIcon = styled(BsDashCircleFill)`
+  height: 50px;
+  width: 50px;
+  fill: red;
 `;

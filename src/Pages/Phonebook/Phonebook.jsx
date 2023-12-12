@@ -7,6 +7,7 @@ import { ContactList } from '../../Components/ContactList/ContactList';
 import Filter from '../../Components/Filter/Filter';
 import { Container } from 'Components/Container.styled';
 import { RequestInfo, Section, SubTitle } from './Phonebook.styled';
+import { Toaster } from 'react-hot-toast';
 
 export default function Phonebook() {
   const dispatch = useDispatch();
@@ -33,6 +34,21 @@ export default function Phonebook() {
         {error && <RequestInfo>Something went wrong. Try again</RequestInfo>}
         <ContactList />
       </Container>
+      <Toaster
+        toastOptions={{
+          style: {
+            gap: '10px',
+            background: '#FFFEF9',
+          },
+          success: {
+            duration: 1000,
+            iconTheme: {
+              primary: '#F3C653',
+              secondary: '#FFFEF9',
+            },
+          },
+        }}
+      />
     </Section>
   );
 }
