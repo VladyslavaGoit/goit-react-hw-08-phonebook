@@ -51,7 +51,19 @@ export const logIn = createAsyncThunk(
   'auth/login',
   async (credentials, thunkAPI) => {
     try {
-      const response = await axios.post('/users/login', credentials);
+      const response = await toast.promise(
+        axios.post('/users/login', credentials),
+        {
+          loading: 'Login...',
+          success: <b>Welcome</b>,
+          error: (
+            <b>
+              Oops... Your password or email may have been entered incorrectly.
+              Try again.
+            </b>
+          ),
+        }
+      );
       setAuthHeader(response.data.token);
       return response.data;
     } catch (error) {

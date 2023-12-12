@@ -8,6 +8,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Route, Routes } from 'react-router-dom';
 import { refreshUser } from 'redux/auth/operations';
 import { selectIsRefreshing } from 'redux/auth/selectors';
+import { Loader } from './Loader/Loader';
 
 const HomePage = lazy(() => import('../Pages/Home/Home'));
 const ContactsPage = lazy(() => import('../Pages/Phonebook/Phonebook'));
@@ -27,7 +28,7 @@ export const App = () => {
   return (
     <>
       {isRefreshing ? (
-        <div>Loading...</div>
+        <Loader />
       ) : (
         <Routes>
           <Route path="/" element={<Layout />}>

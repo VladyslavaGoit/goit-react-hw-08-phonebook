@@ -1,7 +1,8 @@
 import { Link } from 'react-router-dom';
+import { Form, ErrorMessage } from 'formik';
 import styled from 'styled-components';
 
-export const Form = styled.form`
+export const StyledForm = styled(Form)`
   display: flex;
   flex-direction: column;
   max-width: 350px;
@@ -38,4 +39,9 @@ export const StyledLink = styled(Link)`
   &:hover {
     text-decoration: underline;
   }
+`;
+
+export const StyledError = styled(ErrorMessage)`
+  color: ${p => p.theme.colors.subTitleText};
+  font-size: 16px;
 `;
