@@ -1,6 +1,7 @@
+import { Form, ErrorMessage } from 'formik';
 import styled from 'styled-components';
 
-export const StyledForm = styled.form`
+export const StyledForm = styled(Form)`
   margin-bottom: 50px;
   max-width: 350px;
   display: flex;
@@ -29,4 +30,8 @@ export const Label = styled.label`
       box-shadow: 1px 3px 3px 0px ${p => p.theme.colors.accentBckg};
     }
   }
+`;
+export const StyledError = styled(ErrorMessage)`
+  color: ${p => p.theme.colors.subTitleText};
+  font-size: 16px;
 `;
