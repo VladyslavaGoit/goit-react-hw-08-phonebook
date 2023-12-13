@@ -7,10 +7,19 @@ export const ItemWrap = styled.div`
   align-items: center;
   flex-grow: 1;
   box-shadow: 0 4px 6px -6px ${p => p.theme.colors.secondBckg};
+
+  @media screen and (max-width: ${p => p.theme.breakpoint}) {
+    align-items: flex-end;
+  }
+
   & > button {
     font-size: 18px;
-    width: 85px;
-    padding: 10px 15px;
+    padding: 10px 20px;
+
+    @media screen and (max-width: ${p => p.theme.breakpoint}) {
+      padding: 8px 10px;
+      font-size: 14px;
+    }
   }
 `;
 
@@ -28,6 +37,10 @@ export const Text = styled.p`
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 20px;
   color: ${p => p.theme.colors.subTitleText};
+
+  @media screen and (max-width: ${p => p.theme.breakpoint}) {
+    font-size: 16px;
+  }
 `;
 
 export const ContactLink = styled.a`

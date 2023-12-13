@@ -10,6 +10,7 @@ import {
   Text,
   StyledError,
   ErrorIcon,
+  TitleForm,
 } from './LoginForm.styled';
 import { Toaster } from 'react-hot-toast';
 
@@ -48,6 +49,7 @@ export const LoginForm = () => {
         }}
       >
         <StyledForm>
+          <TitleForm>Please login to continue</TitleForm>
           <Label>
             Email
             <Field type="email" name="email" />
@@ -58,10 +60,10 @@ export const LoginForm = () => {
             <Field type="password" name="password" />
             <StyledError name="password" component="div" />
           </Label>
-          <Button type="submit">Log In</Button>{' '}
+          <Button type="submit">Log In</Button>
           <Text>
-            Don't have an account?{' '}
-            <StyledLink to={'/register'}>Sign up</StyledLink>
+            Don't have an account?
+            <StyledLink to={'/register'}> Sign up</StyledLink>
           </Text>
         </StyledForm>
       </Formik>

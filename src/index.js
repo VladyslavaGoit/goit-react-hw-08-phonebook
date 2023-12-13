@@ -22,6 +22,7 @@ const theme = {
     lightBckg: '#E8E8E1',
     accentBckg: '#F3C653',
   },
+  breakpoint: '767px',
 };
 
 ReactDOM.createRoot(document.getElementById('root')).render(

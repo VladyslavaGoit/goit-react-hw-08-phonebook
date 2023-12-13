@@ -15,10 +15,21 @@ export const StyledForm = styled(Form)`
   gap: 20px;
   border-radius: 10px;
   box-shadow: 0px 2px 5px 0px ${p => p.theme.colors.secondaryText};
+
+  @media screen and (max-width: ${p => p.theme.breakpoint}) {
+    padding: 20px;
+    gap: 10px;
+  }
+
   & > button {
     margin-top: 15px;
     margin-bottom: 15px;
     padding: 12px;
+
+    @media screen and (max-width: ${p => p.theme.breakpoint}) {
+      padding: 8px;
+      font-size: 16px;
+    }
   }
 `;
 
@@ -27,6 +38,9 @@ export const TitleForm = styled.h2`
   font-weight: 500;
   text-align: center;
   color: ${p => p.theme.colors.titleText};
+  @media screen and (max-width: ${p => p.theme.breakpoint}) {
+    font-size: 18px;
+  }
 `;
 
 export const Label = styled.label`
@@ -34,6 +48,11 @@ export const Label = styled.label`
   flex-direction: column;
   gap: 10px;
   color: ${p => p.theme.colors.subTitleText};
+
+  @media screen and (max-width: ${p => p.theme.breakpoint}) {
+    gap: 5px;
+    font-size: 16px;
+  }
   & > input {
     padding: 15px;
     font-size: 16px;
@@ -41,6 +60,11 @@ export const Label = styled.label`
     border: 1px solid ${p => p.theme.colors.lightBckg};
     border-radius: 10px;
     box-shadow: 1px 3px 5px 0px ${p => p.theme.colors.lightBckg};
+
+    @media screen and (max-width: ${p => p.theme.breakpoint}) {
+      padding: 10px;
+    }
+
     &:focus {
       outline: none;
       border-color: ${p => p.theme.colors.accentBckg};
@@ -52,6 +76,9 @@ export const Label = styled.label`
 export const Text = styled.p`
   text-align: center;
   color: ${p => p.theme.colors.secondaryText};
+  @media screen and (max-width: ${p => p.theme.breakpoint}) {
+    font-size: 16px;
+  }
 `;
 
 export const StyledLink = styled(Link)`

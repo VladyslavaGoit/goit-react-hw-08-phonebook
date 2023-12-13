@@ -5,12 +5,21 @@ import { IoIosArrowRoundForward } from 'react-icons/io';
 export const Section = styled.section`
   max-width: 1600px;
   margin: 0 auto;
-  padding: 200px 0;
+  padding: 180px 0;
   background-color: ${p => p.theme.colors.primaryBckg};
+
+  @media screen and (max-width: ${p => p.theme.breakpoint}) {
+    padding-bottom: 50px;
+  }
 `;
 export const TextWrapper = styled.div`
+  display: block;
   margin: auto 0;
   width: 400px;
+
+  @media screen and (max-width: ${p => p.theme.breakpoint}) {
+    max-width: 100%;
+  }
 `;
 
 export const SubTitle = styled.h2`
@@ -20,12 +29,21 @@ export const SubTitle = styled.h2`
   font-size: 32px;
   letter-spacing: 0.06em;
   color: ${p => p.theme.colors.subTitleText};
+
+  @media screen and (max-width: ${p => p.theme.breakpoint}) {
+    margin-bottom: 20px;
+    font-size: 22px;
+  }
 `;
 export const Title = styled.h1`
   font-family: 'Courier New', Courier, monospace;
   font-size: 64px;
   margin-bottom: 25px;
   color: ${p => p.theme.colors.titleText};
+
+  @media screen and (max-width: ${p => p.theme.breakpoint}) {
+    font-size: 36px;
+  }
 `;
 
 export const Text = styled.p`
@@ -49,6 +67,12 @@ export const StyledLink = styled(Link)`
   cursor: pointer;
   color: ${p => p.theme.colors.accentText};
   box-shadow: 0px 2px 3px 0px ${p => p.theme.colors.secondBckg};
+
+  @media screen and (max-width: ${p => p.theme.breakpoint}) {
+    margin-right: auto;
+    margin-left: auto;
+  }
+
   &:hover {
     background-color: ${p => p.theme.colors.subTitleText};
     color: ${p => p.theme.colors.titleText};

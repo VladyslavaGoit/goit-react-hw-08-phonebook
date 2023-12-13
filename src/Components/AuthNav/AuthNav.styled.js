@@ -6,6 +6,11 @@ import { IoIosExit } from 'react-icons/io';
 export const Wrapper = styled.div`
   display: flex;
   gap: 55px;
+  @media screen and (max-width: ${p => p.theme.breakpoint}) {
+    flex-direction: column;
+    gap: 3px;
+    font-size: 18px;
+  }
 `;
 
 export const SignUpIcon = styled(SiGnuprivacyguard)`
@@ -40,6 +45,10 @@ export const StyledNavlink = styled(NavLink)`
     }
   }
 
+  @media screen and (max-width: ${p => p.theme.breakpoint}) {
+    padding: 10px 0;
+  }
+
   &.active {
     & ${SignUpIcon} {
       background-color: ${p => p.theme.colors.accentBckg};
@@ -64,6 +73,9 @@ export const StyledNavlink = styled(NavLink)`
       background-color: ${p => p.theme.colors.accentText};
       border-radius: 2px;
       box-shadow: 0px 1px 2px 0px ${p => p.theme.colors.secondBckg};
+      @media screen and (max-width: ${p => p.theme.breakpoint}) {
+        display: none;
+      }
     }
   }
 `;

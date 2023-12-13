@@ -5,10 +5,27 @@ import styled from 'styled-components';
 
 export const StyledForm = styled(Form)`
   display: flex;
+  margin: 0 auto;
   flex-direction: column;
   max-width: 350px;
   gap: 25px;
+  & > button {
+    @media screen and (max-width: ${p => p.theme.breakpoint}) {
+      font-size: 18px;
+    }
+  }
 `;
+
+export const TitleForm = styled.h2`
+  font-size: 28px;
+  font-weight: 500;
+  text-align: center;
+
+  @media screen and (max-width: ${p => p.theme.breakpoint}) {
+    font-size: 18px;
+  }
+`;
+
 export const Label = styled.label`
   display: flex;
   flex-direction: column;
@@ -33,6 +50,11 @@ export const Label = styled.label`
 
 export const Text = styled.p`
   font-size: 20px;
+  @media screen and (max-width: ${p => p.theme.breakpoint}) {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
 `;
 
 export const StyledLink = styled(Link)`

@@ -18,7 +18,7 @@ export const Navigation = () => {
       {isLoggedIn && (
         <StyledNavlink to={'/contacts'}>
           <IconPhone />
-          Phonebook
+          Contacts
         </StyledNavlink>
       )}
     </NavWrap>

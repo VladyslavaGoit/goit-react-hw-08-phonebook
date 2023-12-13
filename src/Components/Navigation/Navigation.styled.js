@@ -18,6 +18,10 @@ export const IconPhone = styled(SlCallEnd)`
 export const NavWrap = styled.nav`
   display: flex;
   gap: 50px;
+  @media screen and (max-width: ${p => p.theme.breakpoint}) {
+    font-size: 18px;
+    gap: 20px;
+  }
 `;
 export const StyledNavlink = styled(NavLink)`
   position: relative;
@@ -26,6 +30,12 @@ export const StyledNavlink = styled(NavLink)`
   gap: 5px;
   padding: 24px 0;
   color: ${p => p.theme.colors.primaryText};
+
+  @media screen and (max-width: ${p => p.theme.breakpoint}) {
+    margin-top: 15px;
+    padding: 10px 0;
+  }
+
   &:hover {
     & ${IconHome} {
       background-color: ${p => p.theme.colors.accentBckg};
@@ -62,6 +72,9 @@ export const StyledNavlink = styled(NavLink)`
       background-color: ${p => p.theme.colors.accentText};
       border-radius: 2px;
       box-shadow: 0px 1px 2px 0px ${p => p.theme.colors.secondBckg};
+      @media screen and (max-width: ${p => p.theme.breakpoint}) {
+        display: none;
+      }
     }
   }
 `;
