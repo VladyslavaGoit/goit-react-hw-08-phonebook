@@ -14,7 +14,11 @@ export const AppBar = () => {
       <Container>
         <Wrapper>
           <Navigation />
-          {isLoggedIn ? <UserMenu className="desktop" /> : <AuthNav />}
+          {isLoggedIn ? (
+            <UserMenu className="desktop" />
+          ) : (
+            <AuthNav className="desktop" />
+          )}
           <MobileMenu />
         </Wrapper>
       </Container>

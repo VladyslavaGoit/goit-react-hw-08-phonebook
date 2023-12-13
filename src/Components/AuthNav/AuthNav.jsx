@@ -5,9 +5,9 @@ import {
   Wrapper,
 } from './AuthNav.styled';
 
-export const AuthNav = () => {
+export const AuthNav = ({ className }) => {
   return (
-    <Wrapper>
+    <Wrapper className={className}>
       <StyledNavlink to={'/login'}>
         <SignInIcon />
         Sign in

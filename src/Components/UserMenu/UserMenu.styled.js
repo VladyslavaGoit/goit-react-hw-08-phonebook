@@ -29,8 +29,11 @@ export const Wrapper = styled.div`
     &.desktop {
       display: none;
     }
-
-    & > button {
+  }
+  & > button {
+    padding: 10px 20px;
+    gap: 15px;
+    @media screen and (max-width: ${p => p.theme.breakpoint}) {
       gap: 10px;
       padding: 8px 0;
       box-shadow: none;

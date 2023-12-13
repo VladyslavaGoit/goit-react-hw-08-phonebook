@@ -13,6 +13,7 @@ export const Wrapper = styled.div`
   color: ${p => p.theme.colors.titleText};
   @media screen and (max-width: ${p => p.theme.breakpoint}) {
     align-items: center;
+    gap: 10px;
   }
 `;
 export const Box = styled.div`
@@ -21,7 +22,7 @@ export const Box = styled.div`
   gap: 15px;
   padding: 25px 0;
   @media screen and (max-width: ${p => p.theme.breakpoint}) {
-    max-width: 100px;
+    max-width: 140px;
   }
 `;
 export const Title = styled.h2`
@@ -45,7 +46,7 @@ export const StyledIconTelegram = styled(FaTelegram)`
   width: 30px;
   height: 30px;
   @media screen and (max-width: ${p => p.theme.breakpoint}) {
-    width: 20px;
+    width: 25px;
     height: 25px;
   }
   &:hover {
@@ -57,7 +58,7 @@ export const StyledIconLn = styled(FaLinkedin)`
   width: 30px;
   height: 30px;
   @media screen and (max-width: ${p => p.theme.breakpoint}) {
-    width: 20px;
+    width: 25px;
     height: 25px;
   }
   &:hover {

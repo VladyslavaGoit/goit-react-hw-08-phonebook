@@ -77,6 +77,8 @@ export const Text = styled.p`
   text-align: center;
   color: ${p => p.theme.colors.secondaryText};
   @media screen and (max-width: ${p => p.theme.breakpoint}) {
+    display: flex;
+    flex-direction: column;
     font-size: 16px;
   }
 `;

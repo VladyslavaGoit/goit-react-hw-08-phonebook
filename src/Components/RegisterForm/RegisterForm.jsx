@@ -76,8 +76,7 @@ export const RegisterForm = () => {
           <Button type="submit">Create account</Button>
           <Text>
             Already have an account?
-            <br />
-            <StyledLink to={'/login'}>Sign in</StyledLink>
+            <StyledLink to={'/login'}> Sign in</StyledLink>
           </Text>
         </StyledForm>
       </Formik>

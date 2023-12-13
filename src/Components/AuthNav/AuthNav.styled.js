@@ -10,6 +10,10 @@ export const Wrapper = styled.div`
     flex-direction: column;
     gap: 3px;
     font-size: 18px;
+
+    &.desktop {
+      display: none;
+    }
   }
 `;
 

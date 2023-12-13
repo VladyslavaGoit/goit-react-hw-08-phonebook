@@ -50,10 +50,10 @@ export const Label = styled.label`
 
 export const Text = styled.p`
   font-size: 20px;
+  text-align: center;
   @media screen and (max-width: ${p => p.theme.breakpoint}) {
     display: flex;
     flex-direction: column;
-    text-align: center;
   }
 `;
 
