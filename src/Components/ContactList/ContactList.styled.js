@@ -2,7 +2,8 @@ import styled from 'styled-components';
 
 export const List = styled.ul`
   display: flex;
-  flex-direction: column-reverse;
+  margin-bottom: 25px;
+  flex-direction: column;
   gap: 10px;
 `;
 

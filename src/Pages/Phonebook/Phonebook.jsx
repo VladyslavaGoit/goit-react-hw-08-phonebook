@@ -3,11 +3,11 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchContacts } from 'redux/contacts/operations';
 import { getContacts, getError } from 'redux/contacts/selectors';
 import ContactForm from '../../Components/ContactForm/ContactForm';
-import { ContactList } from '../../Components/ContactList/ContactList';
 import Filter from '../../Components/Filter/Filter';
 import { Container } from 'Components/Container.styled';
 import { RequestInfo, Section, SubTitle } from './Phonebook.styled';
 import { Toaster } from 'react-hot-toast';
+import { PaginatedContacts } from 'Components/Paginate/Paginate';
 
 export default function Phonebook() {
   const dispatch = useDispatch();
@@ -32,7 +32,7 @@ export default function Phonebook() {
           </>
         )}
         {error && <RequestInfo>Something went wrong. Try again</RequestInfo>}
-        <ContactList />
+        <PaginatedContacts itemsPerPage={5} />
       </Container>
       <Toaster
         toastOptions={{

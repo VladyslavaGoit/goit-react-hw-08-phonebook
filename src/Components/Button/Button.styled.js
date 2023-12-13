@@ -8,6 +8,7 @@ export const StyledButton = styled.button`
   border-radius: 10px;
   border: none;
   font: inherit;
+  color: ${p => p.theme.colors.secondBckg};
   cursor: pointer;
   background-color: ${p => p.theme.colors.accentBckg};
   box-shadow: 0px 2px 3px 0px ${p => p.theme.colors.secondBckg};
