@@ -41,7 +41,7 @@ export default function Phonebook() {
             background: '#FFFEF9',
           },
           success: {
-            duration: 1000,
+            duration: 2000,
             iconTheme: {
               primary: '#F3C653',
               secondary: '#FFFEF9',

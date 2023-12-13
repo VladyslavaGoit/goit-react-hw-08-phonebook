@@ -6,7 +6,7 @@ export const StyledForm = styled(Form)`
   max-width: 350px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 30px;
 
   & > button {
     margin-left: auto;
@@ -36,10 +36,6 @@ export const Label = styled.label`
     border: 1px solid ${p => p.theme.colors.lightBckg};
     border-radius: 10px;
     box-shadow: 1px 3px 5px 0px ${p => p.theme.colors.lightBckg};
-
-    @media screen and (max-width: ${p => p.theme.breakpoint}) {
-      padding: 10px;
-    }
 
     &:focus {
       outline: none;

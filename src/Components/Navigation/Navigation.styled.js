@@ -20,7 +20,7 @@ export const NavWrap = styled.nav`
   gap: 50px;
   @media screen and (max-width: ${p => p.theme.breakpoint}) {
     font-size: 18px;
-    gap: 20px;
+    gap: 25px;
   }
 `;
 export const StyledNavlink = styled(NavLink)`

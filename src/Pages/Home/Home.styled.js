@@ -7,10 +7,6 @@ export const Section = styled.section`
   margin: 0 auto;
   padding: 180px 0;
   background-color: ${p => p.theme.colors.primaryBckg};
-
-  @media screen and (max-width: ${p => p.theme.breakpoint}) {
-    padding-bottom: 50px;
-  }
 `;
 export const TextWrapper = styled.div`
   display: block;

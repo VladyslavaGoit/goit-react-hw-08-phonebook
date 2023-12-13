@@ -25,10 +25,6 @@ export const Label = styled.label`
     border-radius: 10px;
     box-shadow: 1px 3px 5px 0px ${p => p.theme.colors.lightBckg};
 
-    @media screen and (max-width: ${p => p.theme.breakpoint}) {
-      padding: 10px;
-    }
-
     &:focus {
       outline: none;
       box-shadow: 1px 3px 3px 0px ${p => p.theme.colors.accentBckg};
